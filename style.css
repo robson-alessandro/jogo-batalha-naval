@@ -1,0 +1,21 @@
+.containe_principal {
+	display: grid;
+	align-items: center;
+	width: auto;
+	height: auto;
+}
+.tabelas {
+	display: grid;
+}
+div {
+	display: flex;
+	justify-content: center;
+}
+tr td {
+	border: 1px solid black;
+}
+td {
+	text-align: center;
+	width: 30px;
+	height: 30px;
+}
