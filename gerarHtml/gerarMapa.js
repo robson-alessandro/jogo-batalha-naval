@@ -9,8 +9,8 @@ export default function gerarMapa() {
 		for (let j = 0; j < 9; j++) {
 			let coluna1 = document.createElement('td');
 			let coluna2 = document.createElement('td');
-			coluna1.innerHTML = `<button class="botao botao_adv" value="${contador}">${contador}</button>`;
-			coluna2.innerHTML = `<button class="botao" value="${contador}">${contador}</button>`;
+			coluna1.innerHTML = `<button class="botao " value="${contador}">${contador}</button>`;
+			coluna2.innerHTML = `<button class="botao campo_jogador" value="${contador}">${contador}</button>`;
 			linhaTabela1.appendChild(coluna1);
 			linhaTabela2.appendChild(coluna2);
 			contador++;
