@@ -7,6 +7,20 @@
 .tabelas {
 	display: grid;
 }
+.jogo {
+	display: flex;
+	gap: 3em;
+}
+.placar {
+	display: grid;
+	border: 1px solid black;
+	width: 30%;
+}
+.resultado,
+.avisos {
+	display: grid;
+	height: 50%;
+}
 div {
 	display: flex;
 	justify-content: center;
