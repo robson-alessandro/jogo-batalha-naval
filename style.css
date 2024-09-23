@@ -17,7 +17,8 @@
 	width: 30%;
 }
 .resultado,
-.avisos {
+.avisos,
+.jogadas {
 	display: grid;
 	height: 50%;
 }

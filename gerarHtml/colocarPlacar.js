@@ -1,5 +1,5 @@
 const divPlacar = document.querySelector('.resultado');
-export function colocarPlacar(acertoJogador, acertoMaquina) {
+export default function colocarPlacar(acertoJogador, acertoMaquina) {
 	const placar = `
     <h2>placar</h2>
     <p>jogardor ${acertoJogador}/5</p>

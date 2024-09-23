@@ -1,5 +1,7 @@
 export default function colocarBarco(posicao) {
-	let barco = '<=>';
+	let barco = `
+	<img src="./imagens/barco.png">
+	`;
 
-	posicao.textContent = barco;
+	posicao.innerHTML = barco;
 }
