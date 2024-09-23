@@ -1,18 +1,24 @@
 import colocarMensagens from '../gerarHtml/colocarAvisos.js';
 let mensagemHtml;
-export default function verificarSeJogoAcabou(acertosAdv, acertosUsuarios) {
+export default function verificarSeJogoAcabou(acertosAdv, acertosUsuarios, campo) {
 	if (acertosAdv == 5) {
 		mensagemHtml = `
-		<h2>avisos</h2>
-		<p>jogo terminou maquina ganhou!!!</p></p>
+		<h2 style="color:red">fim de jogo</h2>
+		<p>seus 5 navios foram afundados, maquina ganhou!!!</p>
 		`;
 		colocarMensagens(mensagemHtml);
+		campo.forEach((botao) => {
+			botao.setAttribute('disabled', 'true');
+		});
 	}
 	if (acertosUsuarios == 5) {
 		mensagemHtml = `
-		h2>avisos</h2>
-		<p>jogo terminou usuario ganhou!!!</p>
+		<h2 style="color:red">fim de jogo</h2>
+		<p>jogo terminou você ganhou acertous os 5 navios!!!</p>
 		`;
 		colocarMensagens(mensagemHtml);
+		campo.forEach((botao) => {
+			botao.setAttribute('disabled', 'true');
+		});
 	}
 }

@@ -20,6 +20,8 @@
 .avisos,
 .jogadas {
 	display: grid;
+	text-align: center;
+
 	height: 50%;
 }
 div {
