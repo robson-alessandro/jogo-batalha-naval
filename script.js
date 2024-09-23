@@ -22,7 +22,7 @@ function posicionarBarcosUsuario() {
 	let mensagemHtmlInicio = `
 	<h2>iniciar</h2>
 	<p> para iniciar a partida posicione 5 barcos em seu campo.
-	para colocar os bracos precione botão onde deseja colocar.</p>
+	para colocar os barcos precione botão onde deseja colocar.</p>
 	`;
 	colocarMensagens(mensagemHtmlInicio);
 	const campoJogador = document.querySelectorAll('.campo_jogador');
@@ -42,7 +42,7 @@ function posicionarBarcosUsuario() {
 					campoJogador.forEach((botao) => {
 						botao.setAttribute('disabled', 'true');
 					});
-					comecarJogo();
+					comecarJogo(campoJogador);
 					let mensagemHtmlInicioPartida = `
 					<h2>começando o jogo</h2>
 					<p>para dar seguencia a partida. o compultador ja posicionou seus navios, comece atacando o adversario clicando na posição no campo
@@ -52,13 +52,18 @@ function posicionarBarcosUsuario() {
 					`;
 					colocarMensagens(mensagemHtmlInicioPartida);
 					colocarPlacar(acertosJogador, acertosAdversario);
+					campoJogador.forEach((botao) => {
+						if (barcosJogador.includes(botao.value)) {
+							botao.innerHTML = botao.value;
+						}
+					});
 				}
 			}
 		});
 	});
 }
 
-function comecarJogo() {
+function comecarJogo(campoJogador) {
 	let jogadaMaq;
 	let campoAdversario = document.querySelectorAll('.campo_adversario');
 	campoAdversario.forEach((botao) => {
@@ -76,7 +81,7 @@ function comecarJogo() {
 			}
 			jogadasMaquina.push(jogadaMaq);
 
-			if (jogadaMaquina(barcosJogador, jogadaMaq)) {
+			if (jogadaMaquina(barcosJogador, jogadaMaq, campoJogador)) {
 				acertosAdversario++;
 			}
 			colocarPlacar(acertosJogador, acertosAdversario);
