@@ -21,7 +21,6 @@
 .jogadas {
 	display: grid;
 	text-align: center;
-
 	height: 50%;
 }
 div {
@@ -35,4 +34,17 @@ td {
 	text-align: center;
 	width: 30px;
 	height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+	.jogo {
+		display: grid;
+	}
+	.placar {
+		width: auto;
+	}
+
+	h2 {
+		margin: 0;
+	}
 }
