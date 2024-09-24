@@ -45,7 +45,7 @@ function posicionarBarcosUsuario() {
 					comecarJogo(campoJogador);
 					let mensagemHtmlInicioPartida = `
 					<h2>começando o jogo</h2>
-					<p>para dar seguencia a partida. o compultador ja posicionou seus navios, comece atacando o adversario clicando na posição no campo
+					<p>para dar seguencia a partida. o computador ja posicionou seus navios, comece atacando o adversario clicando na posição no campo
 					adversario que deseja atacar. logo na seguencia o computador fara a jogada dele logo após a sua.
 					continue atacando até que um dos dois acerte os 5 navios inimigo.</p>
 
