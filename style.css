@@ -1,11 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
+:root {
+	--letra-titulo: 'Edu AU VIC WA NT Guides', cursive;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-family: var(--letra-titulo);
+	font-size: 2em;
+	margin: 0;
+}
+button {
+	width: 100%;
+	height: 100%;
+}
 .containe_principal {
 	display: grid;
 	align-items: center;
 	width: auto;
-	height: auto;
+	height: 100vh;
+	background-color: rgba(2, 21, 126, 0.685);
+}
+.divisoria {
+	background-color: black;
+	width: 40vw;
+	height: 0.3em;
 }
 .tabelas {
 	display: grid;
+	width: 50%;
 }
 .jogo {
 	display: flex;
@@ -14,7 +38,9 @@
 .placar {
 	display: grid;
 	border: 1px solid black;
+	border-radius: 10px;
 	width: 30%;
+	background-color: aliceblue;
 }
 .resultado,
 .avisos,
@@ -29,6 +55,7 @@ div {
 }
 tr td {
 	border: 1px solid black;
+	background-color: aliceblue;
 }
 td {
 	text-align: center;
@@ -39,9 +66,17 @@ td {
 @media screen and (max-width: 600px) {
 	.jogo {
 		display: grid;
+		width: 100%;
+		justify-items: center;
+	}
+	.divisoria {
+		width: 70vw;
+		margin: 1em 0;
 	}
 	.placar {
 		width: auto;
+		margin: 0 0.5em;
+		padding: 0 1em;
 	}
 
 	h2 {
