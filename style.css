@@ -68,6 +68,7 @@ td {
 		display: grid;
 		width: 100%;
 		justify-items: center;
+		text-align: center;
 	}
 	.divisoria {
 		width: 70vw;
